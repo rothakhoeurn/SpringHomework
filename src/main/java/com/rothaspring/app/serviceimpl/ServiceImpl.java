@@ -86,9 +86,8 @@ public class ServiceImpl implements Service {
 	}
 
 	@Override
-	public Student getUser(int id) {
+	public Student getUserById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}
-
 }

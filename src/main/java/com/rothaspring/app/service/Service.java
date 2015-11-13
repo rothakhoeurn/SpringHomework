@@ -10,5 +10,5 @@ public interface Service {
 	boolean deleteUser(int id);
 	ArrayList<Student> listStudent();
 	int getMaxID(String tblName);
-	Student getUser(int id);
+	Student getUserById(int id);
 }
