@@ -26,7 +26,24 @@ public class ServiceImpl implements Service {
 
 	@Override
 	public boolean updateUser(Student stu) {
-		// TODO Auto-generated method stub
+		String sql = "UPDATE tbuser SET username=?, email=?, password=?, birthdate=?, registerdate=?, image=? WHERE id=?";
+		try(
+				Connection conn = dataSource.getConnection();
+				PreparedStatement ps = conn.prepareStatement(sql);
+			){
+				ps.setString(1, stu.getUsername());
+				ps.setString(2, stu.getEmail());
+				ps.setString(3, stu.getPassword());
+				ps.setDate(4, stu.getBirthdate());
+				ps.setDate(5, stu.getRegisterdate());
+				ps.setString(6, stu.getImage());
+				ps.setInt(7, stu.getId());
+				if(ps.executeUpdate() > 0){
+					return true;
+				}
+		}catch(SQLException e){
+				e.printStackTrace();
+			}
 		return false;
 	}
 
