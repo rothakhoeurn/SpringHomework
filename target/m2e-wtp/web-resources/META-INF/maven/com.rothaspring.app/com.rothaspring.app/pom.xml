@@ -77,5 +77,17 @@
 			<artifactId>spring-jdbc</artifactId>
 			<version>4.2.2.RELEASE</version>
 		</dependency>
+		<!-- Common file upload -->
+		<dependency>
+			<groupId>commons-fileupload</groupId>
+			<artifactId>commons-fileupload</artifactId>
+			<version>1.3.1</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.12</version>
+		</dependency>
 	</dependencies>
 </project>
