@@ -17,4 +17,10 @@ public class MainController {
 		model.addAttribute("list", stuService.listStudent());
 		return "studentform";
 	}
+	@RequestMapping(value = { "/", "/add" })
+	public String add(ModelMap model) {
+		model.addAttribute("add", "Add student form");
+		model.addAttribute("add", stuService.listStudent());
+		return "studentform";
+	}
 }
